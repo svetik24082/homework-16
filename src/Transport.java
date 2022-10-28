@@ -4,10 +4,10 @@ public abstract class Transport {
     private final double engineCapacity;
 
 
-    public Transport(String make, String model,double engineCapacity) {
+    public Transport(String make, String model, double engineCapacity) {
         this.make = validOrDefault(make, " Информация не указана ");
         this.model = validOrDefault(model, " Информация не указана ");
-        this.engineCapacity=  engineCapacity > 0.0f ? engineCapacity : 1.5f;
+        this.engineCapacity = engineCapacity > 0.0f ? engineCapacity : 1.5f;
 
     }
 
@@ -36,15 +36,16 @@ public abstract class Transport {
     public String toString() {
         return
                 "Марка = " + make +
-                ", модель = " + model + " , объем двигателя =  " + engineCapacity + " литров . ";
+                        ", модель = " + model + " , объем двигателя =  " + engineCapacity + " литров . ";
 
     }
 
     //public abstract void refill();
-    public  void  startMoving(){
-        System.out.println( " Начать движение ");
+    public void startMoving() {
+        System.out.println(" Начать движение ");
     }
-    public  void finishTheMovement(){
-        System.out.println( " Закончить движение ");
+
+    public void finishTheMovement() {
+        System.out.println(" Закончить движение ");
     }
 }

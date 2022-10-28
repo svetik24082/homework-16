@@ -15,9 +15,10 @@ public class Main {
         System.out.println(car3);
         car.startMoving();
         car.finishTheMovement();
+        car.pitStop();
+        car.bestLapTime();
+        car.maximumSpeed();
         System.out.println();
-
-
 
 
         Bus bus = new Bus(" Икарус", "250", 0);
@@ -29,12 +30,15 @@ public class Main {
         System.out.println(bus2);
         bus.startMoving();
         bus.finishTheMovement();
+        bus.pitStop();
+        bus.bestLapTime();
+        bus.maximumSpeed();
         System.out.println();
 
-        Cargo cargo = new Cargo( " Камаз", "4310", 20);
-        Cargo cargo1 = new Cargo( " Урал", "4320", 30);
-        Cargo cargo2 = new Cargo( " Валдай", "Next", 25);
-        Cargo cargo3 = new Cargo( " Маз", "4570", 0);
+        Cargo cargo = new Cargo(" Камаз", "4310", 20);
+        Cargo cargo1 = new Cargo(" Урал", "4320", 30);
+        Cargo cargo2 = new Cargo(" Валдай", "Next", 25);
+        Cargo cargo3 = new Cargo(" Маз", "4570", 0);
 
         System.out.println(cargo);
         System.out.println(cargo1);
@@ -42,5 +46,9 @@ public class Main {
         System.out.println(cargo3);
         cargo.startMoving();
         cargo.finishTheMovement();
+        cargo.pitStop();
+        cargo.bestLapTime();
+        cargo.maximumSpeed();
+
     }
 }
