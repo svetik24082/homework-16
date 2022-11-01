@@ -1,4 +1,4 @@
-public abstract class Transport {
+public abstract class Transport implements Competing {
     private final String make;
     private final String model;
     private final double engineCapacity;
@@ -40,12 +40,15 @@ public abstract class Transport {
 
     }
 
-    //public abstract void refill();
-    public void startMoving() {
-        System.out.println(" Начать движение ");
-    }
+    public abstract void refill();
 
-    public void finishTheMovement() {
-        System.out.println(" Закончить движение ");
-    }
+
+    public abstract void startMoving();
+
+
+    public abstract void finishTheMovement();
+
+
 }
+
+

@@ -12,6 +12,24 @@ public class Car extends Transport implements Competing {
         super(make, model, engineCapacity);
     }
 
+    @Override
+    public void refill() {
+        System.out.println(" Запрвить автомобиль бензином  на завправке");
+
+    }
+
+    @Override
+    public void startMoving() {
+        System.out.println("начать движение");
+
+    }
+
+    @Override
+    public void finishTheMovement() {
+        System.out.println("закончить движение");
+
+    }
+
 
     @Override
     public String pitStop() {

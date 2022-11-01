@@ -5,6 +5,24 @@ public class Cargo extends Transport implements Competing {
         super(make, model, engineCapacity);
     }
 
+    @Override
+    public void refill() {
+        System.out.println(" Запрвить грузовик дизелем  на завправке");
+
+    }
+
+    @Override
+    public void startMoving() {
+        System.out.println("начать движение грузовика");
+
+    }
+
+    @Override
+    public void finishTheMovement() {
+        System.out.println("закончить движение грузовика");
+
+    }
+
 
     @Override
     public String pitStop() {
@@ -20,7 +38,10 @@ public class Cargo extends Transport implements Competing {
 
     @Override
     public float maximumSpeed() {
-        System.out.println(" Максимальная скорость у  грузового автомобиля ");
+        System.out.println(" Максимальная скорость у грузового автомобиля ");
         return 0;
     }
+
+
 }
+

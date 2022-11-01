@@ -4,6 +4,24 @@ public class Bus extends Transport implements Competing {
         super(make, model, engineCapacity);
     }
 
+    @Override
+    public void refill() {
+        System.out.println(" Запрвить автомобиль дизелем  на завправке");
+
+    }
+
+    @Override
+    public void startMoving() {
+        System.out.println("начать движение автобуса");
+
+    }
+
+    @Override
+    public void finishTheMovement() {
+        System.out.println("закончить движение автобуса");
+
+    }
+
 
     @Override
     public String pitStop() {

@@ -1,6 +1,8 @@
+
+
 public class Main {
     public static void main(String[] args) {
-        Car car = new Car(null, null, 0);
+        Car car = new Car("Лада", null, 0);
         //car.refill();
         Car car1 = new Car(" Audi ", " A8 50 L TDI quattro ",
                 3.0);
@@ -18,6 +20,8 @@ public class Main {
         car.pitStop();
         car.bestLapTime();
         car.maximumSpeed();
+        car.refill();
+
         System.out.println();
 
 
@@ -28,11 +32,13 @@ public class Main {
         System.out.println(bus);
         System.out.println(bus1);
         System.out.println(bus2);
+        System.out.println(bus3);
         bus.startMoving();
         bus.finishTheMovement();
         bus.pitStop();
         bus.bestLapTime();
         bus.maximumSpeed();
+        bus.refill();
         System.out.println();
 
         Cargo cargo = new Cargo(" Камаз", "4310", 20);
@@ -50,5 +56,35 @@ public class Main {
         cargo.bestLapTime();
         cargo.maximumSpeed();
 
+        Driver<Car> driver = new Driver<>("А", "В", 15);
+        Driver<Cargo> driver1 = new Driver<>("A", "C", 20);
+        Driver<Bus> driver2 = new Driver<>("A", "Д", 20);
+
+
+        driver.driveCar(car);
+        driver1.driveCar(cargo);
+        driver2.driveCar(bus);
+
+
     }
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
