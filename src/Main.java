@@ -56,20 +56,23 @@ public class Main {
         cargo.bestLapTime();
         cargo.maximumSpeed();
 
-        Driver<Car> driver = new Driver<>("А", "В", 15);
-        Driver<Cargo> driver1 = new Driver<>("A", "C", 20);
-        Driver<Bus> driver2 = new Driver<>("A", "Д", 20);
+        Driver driverB = new DriverB(" А", 5, car1);
 
-
-        driver.driveCar(car);
-        driver1.driveCar(cargo);
-        driver2.driveCar(bus);
-
+        Driver driverC = new DriverC("И", 5, cargo);
+        Driver driverD = new DriverD("E", 4, bus);
+        System.out.println(driverB);
+        System.out.println(driverC);
+        System.out.println(driverD);
 
     }
 
 
 }
+
+
+
+
+
 
 
 

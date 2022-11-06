@@ -1,26 +1,31 @@
-public class Driver<T extends Transport> {
-    private String fullName;
+public abstract class Driver<T extends Transport> {
+    private final String fullName;
     private String driverSLicense;
     private int experience;
+    private final T car;
 
-
-    public Driver(String fullName, String driverSLicense, int experience) {
+    public Driver(String fullName, String driverSLicense, int experience, T car) {
         this.fullName = validOrDefault(fullName, " Информация не указана");
         this.driverSLicense = validOrDefault(driverSLicense, " Информация не указана ");
         this.experience = experience > 0.0 ? experience : 10;
+        this.car = car;
     }
 
-    public void driveCar(T transport) {
-        System.out.println("водитель " + getFullName() + " управляет автомобилем " + transport.getMake() + " и будет участвовать в заезде.");
-
+    @Override
+    public String toString() {
+        return "Водитель " +
+                fullName +
+                ", управляет автомобилем " + car.getMake() + " " + car.getModel() +
+                " , будет учавствовать в заезде. ";
     }
 
-    public void setFullName(String fullName) {
-        this.fullName = validOrDefault(fullName, " Информация не указана");
-    }
 
     public String getFullName() {
         return fullName;
+    }
+
+    public T getCar() {
+        return car;
     }
 
     public String getDriverSLicense() {
@@ -53,6 +58,14 @@ public class Driver<T extends Transport> {
         }
     }
 }
+
+
+
+
+
+
+
+
 
 
 
